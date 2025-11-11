@@ -1,0 +1,96 @@
+a.topButton {
+    padding: 1px 60px;
+    border-radius: 3px;
+    color: black;
+    background-color: rgb(189, 255, 255);
+    text-decoration: none;
+    float:right;
+    margin-left: 50px;
+}
+
+a.homeButton {
+    padding: 1px 60px;
+    border-radius: 3px;
+    color: black;
+    background-color: rgb(189, 255, 255);
+    text-decoration: none;
+    float:right;
+    margin-left: 50px;
+}
+
+.homeButton p {
+    background-color: rgb(189, 255, 255);
+    justify-content: center;
+}
+
+a.pSelectButton {
+    padding: 1px 60px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.heading p {
+    background-color: rgb(189, 255, 255);
+    justify-content: center;
+}
+
+.taskSelect{
+  width: 60%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* uncomment this to test if div works */
+  /* background-color: cyan; */
+
+}
+.taskSelect p{
+  text-align: center;
+  font-size: 60px;
+}
+
+.heading{
+  /* background-color: black; uncomment this to test if div works */
+  height: 60px;
+  width: 100%;
+}
+
+.stuIndexContent{
+  /* uncomment this to test if div works
+  background-color: blue; */
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+}
+
+.stuTimerContent{
+  /* uncomment this to test if div works*/
+  /* background-color: blue; */
+  width: 100%;
+  height: 100%;
+  padding-top:20%;
+  padding-bottom: 20%;
+}
+
+.timerBox{
+  background-color: red;
+  height: 40%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+}
+.timerBox p{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+.pageIcon{
+  width: 20%;
+  height: 100%;
+  padding-left: 10%;
+}
+
+
