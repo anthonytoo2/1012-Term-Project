@@ -1,3 +1,16 @@
+.homeButton p {
+    background-color: rgb(189, 255, 255);
+    justify-content: center;
+}
+
+.bottom{
+  height:20%;
+  width: 100%;
+  border: 5px solid blue;
+}
+
+/* student index css*/
+
 a.topButton {
     padding: 1px 60px;
     border-radius: 3px;
@@ -16,11 +29,6 @@ a.homeButton {
     text-decoration: none;
     float:right;
     margin-left: 50px;
-}
-
-.homeButton p {
-    background-color: rgb(189, 255, 255);
-    justify-content: center;
 }
 
 a.pSelectButton {
@@ -64,6 +72,9 @@ a.pSelectButton {
   justify-content: center;
 }
 
+
+/* timer page css*/
+
 .stuTimerContent{
   /* uncomment this to test if div works*/
   /* background-color: blue; */
@@ -92,5 +103,36 @@ a.pSelectButton {
   height: 100%;
   padding-left: 10%;
 }
+
+
+
+/* Reward page css*/
+
+.stuReward{
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right:auto;
+  height:60%;
+  width:50%;
+}
+.stuRewardContent{
+  height:80%;
+  width:100%;
+  justify-content: center;
+  border: 5px solid black;
+}
+.stuReward h2{
+  text-align: center;
+}
+.stuReward p{
+  text-align: center;
+}
+
+.stuReward img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 
