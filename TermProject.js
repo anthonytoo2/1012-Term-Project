@@ -11,3 +11,30 @@
     setTimeout(function() {
         video.pause();
     }, playDuration);
+
+
+function setBuddy(){
+    const button = document.getElementById('submit');
+    let value = document.getElementById('value').value
+    let input = document.getElementById('input').value
+    let output = "";
+    
+
+    button.addEventListener('click',function(){
+        if (input == ""){
+            output = "atleast give it a name...";
+        }else{
+            output = "do you choose" + value + "who's name is" + input+"?";
+        }
+    })
+
+    
+
+    document.getElementById('output').innerText = output;
+
+    return output;
+
+    
+}
+
+export{setBuddy}

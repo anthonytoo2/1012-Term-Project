@@ -2,23 +2,27 @@
 <html>
     <head>
         <meta charset = "utf-8">
-        <link href = "style.css">
+        <link rel="stylesheet" href = "style.css">
         <script src = "TermProject.js"> </script>
         <title>
             Buddy Selection
         </title>
     </head>
 
-    <body>
-        <!-- code-->
-         <div id="Buddy1">
-            <img src="">
-         </div>
-         <div id="Buddy2">
-            <img src="">
-         </div>
-         <div id="Buddy3">
-            <img src="">
-         </div >
+    <body onload="setBuddy()">
+        <div class="buddyContainer">
+            <label for="buddy">Choose a buddy</label>
+            <select id="buddy">
+                <option value="buddy1">buddy 1</option>
+                <option value="buddy2">buddy 2</option>
+                <option value="buddy3">buddy 3</option>
+            </select>
+            <p>
+                <label for="buddyName">Whats the name of your buddy?</label>
+                <input type="text"/>
+            </p>
+            <div id="output"></div>
+            <p><button id="submit">Choose</button></p>
+        </div>
     </body>
 </html>
