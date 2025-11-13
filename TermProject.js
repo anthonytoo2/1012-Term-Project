@@ -37,4 +37,24 @@ function setBuddy(){
     
 }
 
+//this will update a point variable for the reward page, with a button that says Home
+
+//this exists outside the block so that it doesn't reset to 0 each time the pointVariable function is called
+var reward = 0;
+
+function pointVariable(){
+   button.addEventListener('click',function(){
+    reward += 5;
+    window.location.replace("stuIndex.html");
+})
+}
+
+
+//make another button called Home but doesn't exist on the reward page that DOES NOT update reward
+function home(){
+    button.addEventListener('click',function(){
+    window.location.replace("stuIndex.html");
+})
+}
+
 export{setBuddy}
