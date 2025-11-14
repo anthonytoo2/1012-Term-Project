@@ -9,19 +9,33 @@
         </title>
     </head>
 
-    <body onload="pointVariable()">
-        <div class = "stuRewardContent">
-            <div class = "stuReward">
-                <!--make a variable that ads 5 each time the reward screen is reached-->
+    <body onload="pointVariable()" onload="display()">
+        <div class = "pageTop">
+            <div class = "points">
+                <p id="displayValue"></p>
+            </div>
+            <div class = "datesPage">
+                <button class="button" onclick="planner()"> Important Dates </button> 
+             </div>
+             <div class = "shopPage">
+                <button class="button" onclick="shop()"> Shop </button> 
+             </div>
+        </div>
+        <hr>
+
+        <div class = "stuReward">
                 <h2>Great Job Studying!</h2>
                 <p>Since you completed one cycle, here's your reward!</p>
-                <img src = "+5 points" alt = "reward">
-                <!-- create a variable that starts at 0, but +5 each time this page is reached-->
+        <div class = "videoContentBox">
+            <video id = "myVideo" controls autoplay>
+                <source src="relax.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
             </div>
         </div>
-        <div class = "bottom">
-            <!-- <a href = "IndexStu.html" class = "homeButton"> Home</a> -->
-             <button id="home"> Home</button>
+        <div class = "homeButtonFormat">
+            <button id="rewardButton" onclick="pointVariable()"> Home </button>
         </div>
     </body>
 </html>

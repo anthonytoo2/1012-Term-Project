@@ -11,19 +11,27 @@
         </title>
     </head>
 
-    <body>
-        <div class = "heading">
-            <a href = "StuImportantDates.html" class = "topButton"> <p>Planner</p></a>  
-            <a href = "StuShop.html" class = "topButton"> <p>Shop</p></a>  
+    <body onload="display()">
+        <div class = "pageTop">
+            <div class = "points">
+                <p id="displayValue"></p>
+            </div>
+            <div class = "datesPage">
+                <button class="button" onclick="planner()"> Important Dates </button> 
+             </div>
+             <div class = "shopPage">
+                <button class="button" onclick="shop()"> Shop </button> 
+             </div>
         </div>
         <hr>
-        </body>
-        <div class = "stuIndexContent">
-            <div class = "taskSelect">
-            <p>What would you like to do?</p>
-            <a href = "StuTimer.html" class = "pSelectButton"> <img class = "pageIcon" src = "timer.png"></a>
-            <a href = "StuHomework.html" class = "pSelectButton"> <img class = "pageIcon" src = "paper.png"></a>
-            </div>
-        </div>
+                <div class = "timer">
+                    <p class = "indexChoice">Study Session</p>
+                    <button class="taskSelect" onclick="timer()"><img src = "timer.png" alt = timer> </button>
+                </div>
+                
+                <div class = "homework">
+                <p class = "indexChoice">Homework</p> 
+                <button class="taskSelect" onclick="homework()"><img src = "paper.png" alt = homework> </button>
+                </div>
     </body>
 </html>

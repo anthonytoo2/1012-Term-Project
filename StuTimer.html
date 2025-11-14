@@ -9,12 +9,28 @@
         </title>
     </head>
 
-    <body>
-        <div class = "stuTimerContent">
-            <div class = "timerBox">
-                <p>test</p>
+    <body onload="studyVideo()" onload="display()">
+        <div class = "pageTop">
+            <div class = "points">
+                <p id="displayValue"></p>
             </div>
+            <div class = "datesPage">
+                <button class="button" onclick="planner()"> Important Dates </button> 
+             </div>
+             <div class = "shopPage">
+                <button class="button" onclick="shop()"> Shop </button> 
+             </div>
         </div>
-        <a href = "IndexStu.html" class = "homeButton"><p>Home</p></a>
+        <hr>
+        <div class = "timerContentBox">
+            <video id = "myVideo" controls autoplay>
+                <source src="FIND A NEW VIDEO FOR THIS" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class = "homeButtonFormat">
+            <button class="button" onclick="home()"> Home </button>
+        </div>
     </body>
 </html>

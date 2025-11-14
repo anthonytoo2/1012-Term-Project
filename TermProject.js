@@ -43,18 +43,50 @@ function setBuddy(){
 var reward = 0;
 
 function pointVariable(){
-   button.addEventListener('click',function(){
-    reward += 5;
-    window.location.replace("stuIndex.html");
-})
+    const button = document.getElementById('rewardButton');
+        rewardButton.addEventListener('click',function(){
+        reward += 5;
+        sessionStorage.setItem('userRewards', reward);
+        location.replace("IndexStu.html");
+        })
+    }
+
+function display(){
+        document.getElementById("displayValue").innerHTML = output;
+        let retrievedVariable = sessionStorage.getItem('userRewards');
+        output = "Current Points:" + userRewards;
+        document.getElementById('displayElementId').innerText = output;
 }
 
-
-//make another button called Home but doesn't exist on the reward page that DOES NOT update reward
 function home(){
-    button.addEventListener('click',function(){
-    window.location.replace("stuIndex.html");
-})
+    location.replace("IndexStu.html");
 }
 
-export{setBuddy}
+function shop(){
+    location.replace("StuShop.html");
+}
+
+function planner(){
+    location.replace("StuImportantDates.html");
+}
+function timer(){
+    location.replace("StuTimer.html");
+}
+function homework(){
+    location.replace("StuHomework.html");
+}
+
+
+function studyVideo(){
+    // Get the video element
+  const myVideo = document.getElementById('myVideo');
+
+  // Add an event listener for the 'ended' event
+  myVideo.addEventListener('ended', function() {
+
+    location.replace("StuReward.html");
+    
+  });
+}
+
+//export{setBuddy}

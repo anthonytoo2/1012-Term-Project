@@ -1,122 +1,114 @@
-.homeButton p {
-    background-color: rgb(189, 255, 255);
-    justify-content: center;
+/* general css */
+.homeButtonFormat{
+  width:20%;
+  height:100%;
+  padding-left:80%;
+  padding-top: 6px; /*this exists just to give a little seperation betwen the content and the home button*/
 }
 
-.bottom{
-  height:20%;
-  width: 100%;
-  border: 5px solid blue;
+body{
+  background-color: white;
 }
+
+.pageTop{
+  width: 100%;
+
+  padding-bottom: 2.7%;
+}
+.shopPage{
+  height:100%;
+  width:20%;
+  float: right;
+}
+
+.datesPage{
+  height:100%;
+  width:20%;
+  float:right;
+}
+
+.points{
+  height:100%;
+  width:50%;
+  float:left;
+}
+
+
+/* button design */
+.button{
+  padding-top:2%;
+  padding-bottom:2%;
+  width:100%;
+  font-size: 20px;
+  background-color:rgb(189, 255, 255);
+  font-family:'Times New Roman', Times, serif;
+  border-radius:2%; /* 2px for a slightly rounded corner */
+}
+
+#rewardButton{
+  padding-top:2%;
+  padding-bottom:2%;
+  width:100%;
+  font-size: 20px;
+  background-color:rgb(189, 255, 255);
+  font-family:'Times New Roman', Times, serif;
+  border-radius:2%; /* 2px for a slightly rounded corner */
+}
+
 
 /* student index css*/
 
-a.topButton {
-    padding: 1px 60px;
-    border-radius: 3px;
-    color: black;
-    background-color: rgb(189, 255, 255);
-    text-decoration: none;
-    float:right;
-    margin-left: 50px;
-}
 
-a.homeButton {
-    padding: 1px 60px;
-    border-radius: 3px;
-    color: black;
-    background-color: rgb(189, 255, 255);
-    text-decoration: none;
-    float:right;
-    margin-left: 50px;
-}
-
-a.pSelectButton {
-    padding: 1px 60px;
-    border-radius: 3px;
-    text-decoration: none;
-}
-
-.heading p {
-    background-color: rgb(189, 255, 255);
-    justify-content: center;
-}
-
-.taskSelect{
-  width: 60%;
-  height: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  /* uncomment this to test if div works */
-  /* background-color: cyan; */
-
-}
-.taskSelect p{
+.timer{
+  width:50%;
+  float:left;
   text-align: center;
-  font-size: 60px;
 }
 
-.heading{
-  /* background-color: black; uncomment this to test if div works */
-  height: 60px;
-  width: 100%;
+.indexChoice{
+  font-size: 30px;
+  text-align: center; 
 }
 
-.stuIndexContent{
-  /* uncomment this to test if div works
-  background-color: blue; */
-  width: 100%;
-  height: 80%;
-  justify-content: center;
+.homework{
+  width: 50%;
+  float: right;
+  text-align: center;
 }
 
+.taskSelect img{
+  background-color: white;
+  border:none;
+}
 
 /* timer page css*/
 
-.stuTimerContent{
-  /* uncomment this to test if div works*/
-  /* background-color: blue; */
-  width: 100%;
+
+.timerContentBox{
+  height:100%;
+  width:99.5%; /* 99.5% centered the division better*/
+  padding-left: auto;
+  padding-right: auto;
+  background-color: black;
+}
+
+#myVideo{
   height: 100%;
-  padding-top:20%;
-  padding-bottom: 20%;
+  width: 70%;
+  padding-left:15%;
+  padding-right:15%;
 }
-
-.timerBox{
-  background-color: red;
-  height: 40%;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid black;
-}
-.timerBox p{
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-
-.pageIcon{
-  width: 20%;
-  height: 100%;
-  padding-left: 10%;
-}
-
-
 
 /* Reward page css*/
 
 .stuReward{
-  border: 2px solid black;
   margin-left: auto;
   margin-right:auto;
-  height:60%;
-  width:50%;
+  height:100%;
+  width:90%;
 }
 .stuRewardContent{
-  height:80%;
+  height:100%;
   width:100%;
   justify-content: center;
   border: 5px solid black;
@@ -131,6 +123,14 @@ a.pSelectButton {
 .stuReward img{
   margin-left: auto;
   margin-right: auto;
+}
+
+/* reward css */
+.videoContentBox{
+  height:100%;
+  width:99.5%; /* 99.5% centered the division better*/
+  padding-left: auto;
+  padding-right: auto;
 }
 
 
