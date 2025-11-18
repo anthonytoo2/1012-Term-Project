@@ -81,6 +81,11 @@ body{
   border:none;
 }
 
+.taskSelect{
+  height:40%;
+  width:60%;
+}
+
 /* timer page css*/
 
 
