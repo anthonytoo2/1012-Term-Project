@@ -3,7 +3,7 @@
     <head>
         <meta charset = "utf-8">
         <link rel="stylesheet" href = "style.css">
-        <script src = "TermProject.js"> </script>
+        <script src = "TermProject.js" defer></script>
         <title>
             Buddy Selection
         </title>
@@ -12,17 +12,17 @@
     <body onload="setBuddy()">
         <div class="buddyContainer">
             <label for="buddy">Choose a buddy</label>
-            <select id="buddy">
+            <select id="value">
                 <option value="buddy1">buddy 1</option>
                 <option value="buddy2">buddy 2</option>
                 <option value="buddy3">buddy 3</option>
             </select>
             <p>
                 <label for="buddyName">Whats the name of your buddy?</label>
-                <input type="text"/>
+                <input type="text" id="input"/>
             </p>
-            <div id="output"></div>
             <p><button id="submit">Choose</button></p>
+            <div id="output"></div>
         </div>
     </body>
 </html>

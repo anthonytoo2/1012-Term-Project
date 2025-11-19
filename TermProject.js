@@ -18,23 +18,16 @@ function setBuddy(){
     let value = document.getElementById('value').value
     let input = document.getElementById('input').value
     let output = "";
-    
-
+    document.getElementById('output').innerText = output;
     button.addEventListener('click',function(){
+    
         if (input == ""){
             output = "atleast give it a name...";
         }else{
-            output = "do you choose" + value + "who's name is" + input+"?";
+            output = "you chose" + value + "who's name is" + input;
         }
+
     })
-
-    
-
-    document.getElementById('output').innerText = output;
-
-    return output;
-
-    
 }
 
 //this will update a point variable for the reward page, with a button that says Home
@@ -89,4 +82,4 @@ function studyVideo(){
   });
 }
 
-//export{setBuddy}
+export{setBuddy}
