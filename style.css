@@ -77,13 +77,23 @@ body{
 }
 
 .taskSelect img{
-  background-color: white;
+  background-color: rgb(240, 240, 240);
   border:none;
 }
 
 .taskSelect{
-  height:40%;
   width:60%;
+  background-color: rgb(240, 240, 240);
+}
+
+.homework img{
+  height: 50%;
+  width: 50%;
+}
+
+.timer img{
+  height:50%;
+  width:50%;
 }
 
 /* timer page css*/
