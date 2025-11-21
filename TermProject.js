@@ -15,8 +15,8 @@
 
 function setBuddy(){
     const button = document.getElementById('submit');
-    let value = document.getElementById('value').value
-    let input = document.getElementById('input').value
+    let value = document.getElementById('value').value();
+    let input = document.getElementById('input').value();
     let output = "";
     document.getElementById('output').innerText = output;
     button.addEventListener('click',function(){

@@ -7,7 +7,7 @@
 }
 
 body{
-  background-color: white;
+  background-color: lightslategray;
 }
 
 .pageTop{
@@ -40,7 +40,7 @@ body{
   padding-bottom:2%;
   width:100%;
   font-size: 20px;
-  background-color:rgb(189, 255, 255);
+  background-color:rgb(184, 161, 206);
   font-family:'Times New Roman', Times, serif;
   border-radius:2%; /* 2px for a slightly rounded corner */
 }
@@ -50,7 +50,7 @@ body{
   padding-bottom:2%;
   width:100%;
   font-size: 20px;
-  background-color:rgb(189, 255, 255);
+  background-color:rgb(184, 161, 206);
   font-family:'Times New Roman', Times, serif;
   border-radius:2%; /* 2px for a slightly rounded corner */
 }
