@@ -14,6 +14,26 @@ function setBuddy(){
     })
 }
 
+function buddyImage(){
+    const image = document.getElementById('chooseBuddy');
+    const valueInput = document.getElementById('value');
+
+    valueInput.addEventListener('change',function(){
+        const value = valueInput.value;
+
+        if (value == 'buddy1'){
+            image.src = 'Bulb.png'
+        }
+        if (value == 'buddy2'){
+            image.src = 'Squirt.png'
+        }
+        if (value == 'buddy3'){
+            image.src = 'Char.png'
+        }
+
+    })
+}
+
 function home(){
     location.replace("IndexStu.html");
 }
