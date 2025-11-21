@@ -110,7 +110,7 @@ hr{
   width:99.5%; /* 99.5% centered the division better*/
   padding-left: auto;
   padding-right: auto;
-  background-color: black;
+  background-color: rgb(175, 191, 207);
 }
 
 #myVideo{
