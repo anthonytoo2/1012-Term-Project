@@ -1,17 +1,16 @@
 function setBuddy(){
     const button = document.getElementById('submit');
-    let value = document.getElementById('value').value();
-    let input = document.getElementById('input').value();
-    let output = "";
-    document.getElementById('output').innerText = output;
     button.addEventListener('click',function(){
-    
+        let value = document.getElementById('value').value;
+        console.log(value);
+        let input = document.getElementById('input').value;
+        let output;
         if (input == ""){
             output = "atleast give it a name...";
         }else{
-            output = "you chose" + value + "who's name is" + input;
+            output = "You chose " + value + " who's name is " + input;
         }
-
+        document.getElementById('display').innerText = output;
     })
 }
 
@@ -43,4 +42,4 @@ function studyVideo(){
   });
 }
 
-// export{setBuddy}
+// export{ setBuddy }
