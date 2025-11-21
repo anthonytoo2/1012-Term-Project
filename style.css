@@ -7,12 +7,15 @@
 }
 
 body{
-  background-color: lightslategray;
+  background-color: rgb(175, 191, 207);
+}
+
+hr{
+  border-top: 2px solid black;
 }
 
 .pageTop{
   width: 100%;
-
   padding-bottom: 2.7%;
 }
 .shopPage{
@@ -40,7 +43,7 @@ body{
   padding-bottom:2%;
   width:100%;
   font-size: 20px;
-  background-color:rgb(184, 161, 206);
+  background-color:rgb(206, 206, 206);
   font-family:'Times New Roman', Times, serif;
   border-radius:2%; /* 2px for a slightly rounded corner */
 }
@@ -50,7 +53,7 @@ body{
   padding-bottom:2%;
   width:100%;
   font-size: 20px;
-  background-color:rgb(184, 161, 206);
+  background-color:rgb(206, 206, 206);
   font-family:'Times New Roman', Times, serif;
   border-radius:2%; /* 2px for a slightly rounded corner */
 }
@@ -68,25 +71,28 @@ body{
 .indexChoice{
   font-size: 30px;
   text-align: center; 
+  text-decoration-line: underline;
 }
 
-.homework{
+.tdList{
   width: 50%;
   float: right;
   text-align: center;
 }
 
 .taskSelect img{
-  background-color: rgb(240, 240, 240);
+  background-color:rgb(206, 206, 206);
   border:none;
 }
 
 .taskSelect{
   width:60%;
-  background-color: rgb(240, 240, 240);
+  padding-top:8%;
+  padding-bottom:8%;
+  background-color:rgb(206, 206, 206);
 }
 
-.homework img{
+.tdList img{
   height: 50%;
   width: 50%;
 }
