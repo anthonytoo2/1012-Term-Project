@@ -36,6 +36,16 @@ hr{
   float:left;
 }
 
+#submit{
+  padding-top:2%;
+  padding-bottom:2%;
+  width:100%;
+  font-size: 20px;
+  background-color:rgb(206, 206, 206);
+  font-family:'Times New Roman', Times, serif;
+  border-radius:2%; /* 2px for a slightly rounded corner */
+}
+
 
 /* button design */
 .button{
