@@ -1,15 +1,22 @@
+var buddyName;
+var buddyImage;
+
 function setBuddy(){
     const button = document.getElementById('submit');
     button.addEventListener('click',function(){
         let value = document.getElementById('value').value;
+        buddyName = value;
         let input = document.getElementById('input').value;
         let output;
         if (input == ""){
             output = "atleast give it a name...";
         }else{
-            output = "You chose " + value + " who's name is " + input;
+            output = "You chose " + value + " who's name is " + input + " ridirecting...";
+            setTimeout(() => {
+                location.replace("indexStu.html");
+            }, 3000);
         }
-        document.getElementById('display').innerText = output;
+        document.getElementById('output').innerText = output;
     })
 }
 
@@ -30,6 +37,7 @@ function buddyImage(){
             image.src = 'Char.png'
         }
 
+        buddyImage = image;
     })
 }
 

@@ -9,30 +9,30 @@
         </title>
     </head>
 
-    <body onload="setBuddy(); buddyImage();">
-
-        <div class="buddyContainer">
-            <label for="buddy">Choose a buddy</label>
-            <select id="value">
-                <option value="buddy1">buddy 1</option>
-                <option value="buddy2">buddy 2</option>
-                <option value="buddy3">buddy 3</option>
-            </select>
-            
-            <p><button id="submit">Choose</button></p>
-            <div id="display">
+    <body onload="setBuddy(); buddyImage(); confirmBuddy(); ">
+        <div class="buddyBody">
+            <div class="BuddySelections">
+                <div class="Selector">
+                    <label for="buddy">Choose a buddy</label>
+                    <select id="value">
+                        <option value="buddy1">buddy 1</option>
+                        <option value="buddy2">buddy 2</option>
+                        <option value="buddy3">buddy 3</option>
+                    </select>
+                </div>
+                <div class="nameInput">
+                    <p>
+                        <label for="buddyName">Whats the name of your buddy?</label>
+                        <br>
+                        <input type="text" id="input">
+                    </p>
+                    <p><button id="submit">Choose</button></p>
+                    <p id="output"></p>
+                </div>
+            </div>
+            <div class="display">
                 <img src="Bulb.png" id="chooseBuddy" alt="image of buddy">
             </div>
-            <div class="nameInput">
-                <p>
-                    <label for="buddyName">Whats the name of your buddy?</label>
-                    <input type="text" id="input">
-                </p>
-            </div>
-        </div>
-        
-        <div class = "homeButtonFormat">
-            <button class="button" onclick="home()"> Home </button>
         </div>
     </body>
 </html>
