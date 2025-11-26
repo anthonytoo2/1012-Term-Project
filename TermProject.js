@@ -5,7 +5,8 @@ function setBuddy(){
     const button = document.getElementById('submit');
     button.addEventListener('click',function(){
         let value = document.getElementById('value').value;
-        buddyName = value;
+        buddyName = document.getElementById('value').value;
+        console.log(buddyName);
         let input = document.getElementById('input').value;
         let output;
         if (input == ""){
@@ -40,6 +41,12 @@ function buddyImage(){
         buddyImage = image;
     })
 }
+
+function showMe(){
+    var name = "123";
+	document.getElementById('name').innerHTML= buddyName;
+}
+
 
 function home(){
     location.replace("IndexStu.html");
