@@ -23,6 +23,31 @@ hr{
   width:20%;
   float: right;
 }
+.PFP{
+  height:100%;
+  width:11%;
+  float: left;
+  padding-left: 2%; /*set extremely small just to make the buddy picture not so left*/
+}
+.userName{
+  height:100%;
+  width:10%;
+  float: left;
+  margin-left: -6%;
+}
+.shopPage{
+  height:100%;
+  width:20%;
+  float: right;
+}
+#name{
+  font-size:260%;
+  font-family:'Times New Roman', Times, serif;
+}
+#buddyPFP{
+  height:100%;
+  width: 24%;
+}
 
 .datesPage{
   height:100%;
