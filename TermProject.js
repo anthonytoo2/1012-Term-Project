@@ -1,3 +1,5 @@
+/* All the local storage statements were completed using the help of Gemini*/
+
 var buddyName;
 
 function setBuddy(){
@@ -91,14 +93,9 @@ function timer(){
 
 
 function studyVideo(){
-
-  const myVideo = document.getElementById('myVideo');
-
-  myVideo.addEventListener('ended', function() {
-
-    location.replace("StuReward.html");
-    
-  });
+    setTimeout(() => {
+        location.replace("StuReward.html"); /* timer exits just to stop the user from skipping too fast, can be adjusted to a larger time interval if anything*/
+    }, 3000);
 }
 
 // export{ setBuddy }
