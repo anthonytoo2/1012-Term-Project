@@ -56,13 +56,13 @@ const image = document.getElementById('chooseBuddy');
     let finalImagePath = '';
     
 
-    if (value == 'buddy1'){
+    if (value === 'buddy1'){
       finalImagePath = 'Bulb.png';
     }
-    if (value == 'buddy2'){
+    if (value === 'buddy2'){
       finalImagePath = 'Squirt.png';
     } 
-    if (value == 'buddy3'){
+    if (value === 'buddy3'){
       finalImagePath = 'Char.png';
     }
 
