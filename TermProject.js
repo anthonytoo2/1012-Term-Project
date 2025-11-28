@@ -1,45 +1,18 @@
-var buddyName;
-var buddyPicture;
-var bulbTree, charTree, squirtTree,evoFlag; //Shop item requirements
-var finalImagePath = '';
-var storedName = localStorage.getItem('storedBuddyName');
-var storedImagePath = localStorage.getItem('storedBuddyImage');
-
-
-function setBuddy(){
-    const button = document.getElementById('submit');
-  
-    button.addEventListener('click', function() {
-        let value = document.getElementById('value').value;
-        let input = document.getElementById('input').value;
-
-        window.buddyName = document.getElementById('input').value;
-        localStorage.setItem('storedBuddyName', window.buddyName);
-
-        if (window.buddyImage) {
-            localStorage.setItem('storedBuddyImage', window.buddyImage);
-        } else {
-            console.warn("User did not select an image. Using default path.");
-            localStorage.setItem('storedBuddyImage', 'default.png');
-        }
-        let output;
-        if (input === "") {
-            output = "atleast give it a name...";
-        } else {
-            output = "You chose " + value + " who's name is " + input + " redirecting...";
-            setTimeout(() => {
-                location.replace("indexStu.html");
-            }, 3000);
-        }
-        document.getElementById('output').innerText = output;
-  });
-}
+let buddyName;
+let buddyPicture;
+let bulbTree = false;
+let charTree = false;
+let squirtTree = false; 
+let evoFlag = false; //Shop item requirements
+let finalImagePath = '';
+let storedName = localStorage.getItem('storedBuddyName');
+let storedImagePath = localStorage.getItem('storedBuddyImage');
 
 function showMe(){
     
     const nameElement = document.getElementById('name'); 
     if (storedName && nameElement) {
-         nameElement.innerHTML = storedName;
+        nameElement.innerHTML = storedName;
     }
 
     const imageElement = document.getElementById('buddyPFP');
@@ -49,7 +22,7 @@ function showMe(){
 }
 
 
-function buddyImage(){
+function buddyImage(bulbTree,charTree,squirtTree){
     const image = document.getElementById('chooseBuddy'); 
     const valueInput = document.getElementById('value');
 
@@ -83,9 +56,40 @@ function buddyImage(){
         }
 
         image.src = finalImagePath; 
-        window.buddyImage = finalImagePath; 
-        return bulbTree,squirtTree,charTree;
+        window.buddyImage = finalImagePath;
     });
+
+    return (bulbTree,squirtTree,charTree);
+}
+
+function setBuddy(){
+    const button = document.getElementById('submit');
+  
+    button.addEventListener('click', function() {
+        let value = document.getElementById('value').value;
+        let input = document.getElementById('input').value;
+
+        window.buddyName = document.getElementById('input').value;
+        localStorage.setItem('storedBuddyName', window.buddyName);
+
+        if (window.buddyImage) {
+            localStorage.setItem('storedBuddyImage', window.buddyImage);
+        } else {
+            console.warn("User did not select an image. Using default path.");
+            localStorage.setItem('storedBuddyImage', 'default.png');
+        }
+        let output;
+        if (input === "") {
+            output = "atleast give it a name...";
+        } else {
+            output = "You chose " + value + " who's name is " + input + " redirecting...";
+            setTimeout(() => {
+                location.replace("indexStu.html");
+                return (bulbTree,charTree,squirtTree)
+            }, 3000);
+        }
+        document.getElementById('output').innerText = output;
+  });
 }
 
 function evoShop(){
@@ -98,14 +102,19 @@ function evoShop(){
     const Blastoise = document.getElementById('squirt2');
     const ImagePFP = document.getElementById('buddyPFP');
 
+    buddyImage(charTree,bulbTree,squirtTree);
+
     ivysaur.addEventListener('click',function(){
         let output;
-        output = storedName + " has evolved into Ivysaur!";  
-        // document.getElementById('output').innerText = output
 
-        finalImagePath = 'ivy.png';
-        localStorage.setItem('storedimagePath',finalImagePath);
-        showMe();
+        console.log("bulbTree:", bulbTree, "squirtTree:", squirtTree, "charTree:", charTree);
+        if(bulbTree == true){
+            output = storedName + " has evolved into Ivysaur!";  
+            finalImagePath.src = 'ivy.png';
+        }
+            
+
+        document.getElementById('output').innerText = output
     })
     
 }

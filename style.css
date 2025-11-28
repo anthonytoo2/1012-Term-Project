@@ -238,23 +238,31 @@ hr{
   margin-left: 2.5%;
 }
 
-.Venasaur{
-  margin-top: 0.5%;
+.Venasaur {
+    /* Set the width using flex: 1 means they all take equal width */
+    flex: 1; 
+    margin-right: 20px; /* Add some space between sections */
 }
 
-.Charizard{
-  margin-left: 40%;
-  margin-right: 40%;
-  margin-top: -44.5%;
+.Charizard {
+    flex: 1;
+    margin-right: 20px;
 }
 
-.Blastoise{
-  margin-left: 80%;
-  margin-top: -44.5%;
+.Blastoise {
+    flex: 1;
+    /* No margin-right needed for the last element */
 }
 
 .shopContainer{
   width: 100%;
+  height: 100%;
+  padding-right:5%;
+  padding-left: 5%;
+
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-start;
 }
 
 .buddyBody{
