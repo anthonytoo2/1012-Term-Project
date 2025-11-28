@@ -9,7 +9,7 @@
         </title>
     </head>
 
-    <body onload="showMe()">
+    <body onload="showMe(); evoShop();">
         <div class = "pageTop">
             <div class = "PFP">
                 <img id="buddyPFP" src="" alt="Your chosen buddy image">
@@ -19,6 +19,39 @@
             </div>
         </div>
         <hr>
+        <div class="shopContainer">
+            <div class="Venasaur">
+                <div>
+                    <img src="ivy.png" class="pokemon">
+                    <p><button class="buy" id="bulb1">Purchase</button></p>
+                </div>
+                <div>
+                    <img src="ven.png" class="pokemon">
+                    <p><button class="buy" id="bulb2">Purchase</button></p>
+                </div>
+            </div>
+            <div class="Charizard" >
+                <div>
+                    <img src="charmeleon.png" class="pokemon">
+                    <p><button class="buy" id="char1">Purchase</button></p>
+                </div>
+                <div>
+                    <img src="zard.png" class="pokemon">
+                    <p><button class="buy" id="char2">Purchase</button></p>
+                </div>
+            </div>
+            <div class="Blastoise" >
+                <div>
+                    <img src="tortle.png" class="pokemon">
+                    <p><button class="buy" id="squirt1">Purchase</button></p>
+                </div>
+                <div>
+                    <img src="toise.png" class="pokemon">
+                    <p><button class="buy" id="squirt2">Purchase</button></p>
+                </div>
+            </div>
+        </div>
+            <p id="output"></p>
         <div class = "homeButtonFormat">
             <button class="button" onclick="home()"> Home </button>
         </div>
