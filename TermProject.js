@@ -100,10 +100,12 @@ function evoShop(){
 
     ivysaur.addEventListener('click',function(){
         let output;
-            console.log(bulbTree,squirtTree,charTree,storedImagePath)
-            output = storedName + " has evolved into Ivysaur!";  
+        output = storedName + " has evolved into Ivysaur!";  
+        // document.getElementById('output').innerText = output
 
-        document.getElementById('output').innerText = output
+        finalImagePath = 'ivy.png';
+        localStorage.setItem('storedimagePath',finalImagePath);
+        showMe();
     })
     
 }
