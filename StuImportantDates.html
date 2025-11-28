@@ -3,16 +3,98 @@
     <head>
         <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href = "style.css">
-        <link rel = "stylesheet" href = "task.css">
         <script src = "TermProject.js"> </script>
-        <script src = "task.js"></script>
         <title>
             To-do List
         </title>
+        <style type="text/css">
+      
+/* Center the container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; /* Bigger base font */
+}
+
+/* Title */
+.container h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Add Task section */
+.add-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Text box (large + better UI) */
+#task-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+/* Add Task Button */
+button {
+    padding: 12px 18px;
+    font-size: 18px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #357ab8;
+}
+
+/* Task count text */
+#task-count {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Task list styles */
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background: #f5f7fa;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Back button */
+a button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+        </style>
 
     </head>
 
     <body onload="showMe()">
+
         <div class = "pageTop">
             <div class = "PFP">
                 <img id="buddyPFP" src="" alt="Your chosen buddy image">
@@ -25,23 +107,27 @@
              </div>
         </div>
         <hr>
-
-
-        <div class="container">
-    <h2>Task Checklist</h2>
-
-        <div class="add-row">
-            <input id="task-input" type="text" placeholder="Enter a task" />
-            <button onclick="addTask()">Add Task</button>
-        </div>
-
-        <p id="task-count">No tasks yet.</p>
-
-        <ul id="task-list" aria-live="polite"></ul>
-
-        <br />
         <div class = "homeButtonFormat">
             <button class="button" onclick="home()"> Home </button>
         </div>
+        <body>
+
+<div class="container">
+    <h1>Task Checklist</h2>
+
+    <div class="add-row">
+        <input id="task-input" type="text" placeholder="Enter a task" />
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <p id="task-count">No tasks yet.</p>
+
+    <ul id="task-list" aria-live="polite"></ul>
+
+    <br />
+    <a href="Homepage.html"><button>Back to Dashboard</button></a>
+</div>
+
+<script src="tasks.js"></script>
     </body>
 </html>
