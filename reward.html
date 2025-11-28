@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reward</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align:center; background: linear-gradient(180deg,#f0f9ff,#e9f7ef); padding:50px;}
+    .card { display:inline-block; background:#fff; padding:30px 40px; border-radius:12px; box-shadow:0 12px 30px rgba(20,30,60,0.08); }
+    h1 { color:#2e7d32; margin:6px 0; }
+    p { color:#445; }
+    button { margin-top:18px; padding:10px 16px; border-radius:8px; border:none; background:#4caf50; color:#fff; cursor:pointer;}
+    /* confetti pieces */
+    .confetti { position:fixed; left:0; top:0; width:10px; height:10px; opacity:0.9; transform:translateY(-50vh); animation:fall 2500ms linear forwards; }
+    @keyframes fall {
+      to { transform:translateY(120vh) rotate(720deg); opacity:1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Congratulations! 🎉</h1>
+    <p id="msg">You completed focused study time.</p>
+    <button onclick="goBack()">Go Back to Tracker</button>
+  </div>
+
+  <script>
+    // Show personalized message if query present
+    const params = new URLSearchParams(window.location.search);
+    const user = params.get('user') || 'Student';
+    const mins = params.get('mins') || '';
+    document.getElementById('msg').innerText = mins ? `${user}, you studied ${mins} minute(s)! Great job!` : `${user}, great job!`;
+
+    // Simple confetti generator (no libs)
+    (function makeConfetti(){
+      const colors = ['#ff6b6b','#ffd166','#6bcB77','#4dabf7','#9b5de5'];
+      const count = 30;
+      for (let i=0;i<count;i++){
+        const el = document.createElement('div');
+        el.className = 'confetti';
+        el.style.background = colors[Math.floor(Math.random()*colors.length)];
+        el.style.left = Math.random()*100 + 'vw';
+        el.style.width = (6 + Math.random()*10) + 'px';
+        el.style.height = (6 + Math.random()*12) + 'px';
+        el.style.borderRadius = (Math.random()*50)+'%';
+        el.style.transform = `translateY(-30vh) rotate(${Math.random()*360}deg)`;
+        el.style.animationDelay = (Math.random()*500) + 'ms';
+        el.style.animationDuration = (1500 + Math.random()*1500) + 'ms';
+        document.body.appendChild(el);
+        // remove after animation
+        setTimeout(()=> el.remove(), 4200);
+      }
+    })();
+
+    function goBack() {
+      window.location.href = 'loginsuccess.html';
+    }
+  </script>
+</body>
+</html>

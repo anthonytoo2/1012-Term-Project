@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Focus Tracker</title>
+    <link rel="stylesheet" href="style1.css" />
+    <style type="text/css">
+        .a{
+            text-align: left;
+            font-weight: bold;
+        }
+        .btn-cancel{
+            background-color: #FF0000;
+            color: #FFFFFF;
+        }
+         .btn-login{
+            background-color: #00FF00;
+            color: #FFFFFF;
+            margin-left: 100px;
+        }
+        .btn-login,.btn-cancel{
+            border_radius:8px;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="login-page" class="container">
+       <img src="bannerlogo.png" alt="Student Icon" class="student-img">
+        <h1 class="project-title" style="text-align: center;">Student Buddy Login</h1>
+        <p class="subtitle">Please enter your details to continue</p>
+        <p><b>Presented By:</b> AKA Cool Kidz</p>
+
+        <div class="a">
+            <label>StudentID:</label>
+            <input type="text" id="student-id" placeholder="Student ID" />
+            <br><br>
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Password" />
+             <br /> <br>
+            <button onclick="attemptLogin()" class="btn-login">Login</button>
+            <button type="button" class="btn-cancel" onclick="cancelLogin()">Cancel</button>
+
+            <p id="error-msg" style="color: red; display: none;">Try again! Invalid ID or Password.</p>
+        </div>
+    </div>
+
+    <div id="dashboard" class="container hidden">
+        <h2>Welcome, <span id="username-display">Student</span>!</h2>
+
+        <div style="border-bottom: 1px solid #eee; padding-bottom: 20px;">
+            <h3>1. Set Your Daily Goal</h3>
+            <label>I want to study for:</label>
+            <input type="number" id="goal-input" placeholder="Hours" style="width: 60px;" /> hours
+            <button onclick="setGoal()">Set Goal</button>
+        </div>
+
+        <div style="border-bottom: 1px solid #eee; padding-bottom: 20px;">
+            <h3>2. Study Timer</h3>
+            <div id="timer-display">00:00:00</div>
+            <button id="start-btn" onclick="startTimer()">Start Studying</button>
+            <button id="stop-btn" class="hidden" onclick="stopTimer()">Stop & Save</button>
+        </div>
+
+        <div class="progress-section">
+            <h3>3. Productivity Trends</h3>
+            <p>Daily Progress: <span id="progress-text">0%</span></p>
+
+            <div class="progress-bar-bg">
+                <div id="progress-fill" class="progress-bar-fill"></div>
+            </div>
+            <p><small>Total Time Studied Today: <span id="total-time">0</span> mins</small></p>
+        </div>
+
+        <br />
+        <a href="tasks.html"><button>Go to Task Checklist</button></a>
+        <br /><br />
+        <button onclick="logout()" style="background-color: #6c757d;">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
