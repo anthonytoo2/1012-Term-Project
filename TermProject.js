@@ -1,12 +1,14 @@
-let buddyName;
-let buddyPicture;
-let bulbTree = false;
-let charTree = false;
-let squirtTree = false; 
-let evoFlag = false; //Shop item requirements
-let finalImagePath = '';
-let storedName = localStorage.getItem('storedBuddyName');
-let storedImagePath = localStorage.getItem('storedBuddyImage');
+/* comment out lines 3-11 to run vitest*/
+
+// let buddyName;
+// let buddyPicture;
+// let bulbTree = false;
+// let charTree = false;
+// let squirtTree = false; 
+// let evoFlag = false; //Shop item requirements
+// let finalImagePath = '';
+// let storedName = localStorage.getItem('storedBuddyName');
+// let storedImagePath = localStorage.getItem('storedBuddyImage');
 
 function showMe(){
     
@@ -142,5 +144,4 @@ function studyVideo(){
     }, 3000);
 }
 
-
-// export{ setBuddy }
+export{ home, shop, planner, timer }
