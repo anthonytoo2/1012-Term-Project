@@ -4,6 +4,7 @@
         <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href = "style.css">
         <script src = "TermProject.js"> </script>
+        <script src = "task.js"></script>
         <title>
             To-do List
         </title>
@@ -23,6 +24,21 @@
              </div>
         </div>
         <hr>
+
+
+        <div class="container">
+    <h2>Task Checklist</h2>
+
+        <div class="add-row">
+            <input id="task-input" type="text" placeholder="Enter a task" />
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <p id="task-count">No tasks yet.</p>
+
+        <ul id="task-list" aria-live="polite"></ul>
+
+        <br />
         <div class = "homeButtonFormat">
             <button class="button" onclick="home()"> Home </button>
         </div>
