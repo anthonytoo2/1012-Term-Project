@@ -5,6 +5,7 @@ let buddyPicture;
 let bulbTree,charTree,squirtTree,evoFlag;
 let storedName = localStorage.getItem('storedBuddyName');
 let storedImagePath = localStorage.getItem('storedBuddyImage');
+let reward = 0;
 
 
 function showMe(){ 
@@ -214,6 +215,7 @@ function studyVideo(){
     setTimeout(() => {
         location.replace("StuReward.html"); /* timer exits just to stop the user from skipping too fast, can be adjusted to a larger time interval if anything*/
     }, 3000);
+    reward += 60;
 }
 
 //export{ home, shop, planner, timer }
