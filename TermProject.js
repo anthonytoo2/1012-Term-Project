@@ -1,16 +1,13 @@
 /* comment out lines 3-11 to run vitest*/
 
-// let buddyName;
-// let buddyPicture;
-// let bulbTree = false;
-// let charTree = false;
-// let squirtTree = false; 
-// let evoFlag = false; //Shop item requirements
-// let finalImagePath = '';
-// let storedName = localStorage.getItem('storedBuddyName');
-// let storedImagePath = localStorage.getItem('storedBuddyImage');
+let buddyName;
+let buddyPicture;
+let bulbTree,charTree,squirtTree,evoFlag;
+let storedName = localStorage.getItem('storedBuddyName');
+let storedImagePath = localStorage.getItem('storedBuddyImage');
 
-function showMe(){
+
+function showMe(){ 
     
     const nameElement = document.getElementById('name'); 
     if (storedName && nameElement) {
@@ -23,19 +20,24 @@ function showMe(){
     }
 }
 
-
-function buddyImage(bulbTree,charTree,squirtTree){
+function buddyImage(){
     const image = document.getElementById('chooseBuddy'); 
     const valueInput = document.getElementById('value');
 
-    
-    finalImagePath = 'bulb.png';
+    let finalImagePath = 'bulb.png';
     bulbTree = true;
     squirtTree = false;
     charTree = false;
+    evoFlag = false;
     image.src = finalImagePath; 
-    window.buddyImage = finalImagePath; //default values if event isn't called
-    
+    window.buddyImage = finalImagePath; // default image if no event occurs
+
+    localStorage.setItem("bulbTree", bulbTree);
+    localStorage.setItem("squirtTree", squirtTree);
+    localStorage.setItem("charTree", charTree);
+    localStorage.setItem("evoFlag", evoFlag);//save values of boolean between pages
+
+
     valueInput.addEventListener('change', function() {
         const value = valueInput.value;
         if (value === 'buddy1'){
@@ -57,12 +59,15 @@ function buddyImage(bulbTree,charTree,squirtTree){
             charTree = true;
         }
 
+        localStorage.setItem("bulbTree", bulbTree);
+        localStorage.setItem("squirtTree", squirtTree);
+        localStorage.setItem("charTree", charTree);
+
         image.src = finalImagePath; 
         window.buddyImage = finalImagePath;
     });
-
-    return (bulbTree,squirtTree,charTree);
 }
+
 
 function setBuddy(){
     const button = document.getElementById('submit');
@@ -104,21 +109,88 @@ function evoShop(){
     const Blastoise = document.getElementById('squirt2');
     const ImagePFP = document.getElementById('buddyPFP');
 
-    buddyImage(charTree,bulbTree,squirtTree);
+    const bulbTree = JSON.parse(localStorage.getItem("bulbTree"));
+    const squirtTree = JSON.parse(localStorage.getItem("squirtTree"));
+    const charTree = JSON.parse(localStorage.getItem("charTree"));
+    let evoFlag = JSON.parse(localStorage.getItem("evoFlag"));// grabs previous values from buddyImage
+
+    let output;
 
     ivysaur.addEventListener('click',function(){
-        let output;
-
-        console.log("bulbTree:", bulbTree, "squirtTree:", squirtTree, "charTree:", charTree);
         if(bulbTree == true){
             output = storedName + " has evolved into Ivysaur!";  
-            finalImagePath.src = 'ivy.png';
+            evoFlag = true;
+            ImagePFP.src = 'ivy.png';
+            localStorage.setItem('buddyPFP',ImagePFP);
+        } else {
+            output = storedName + " can't evolve into Ivysaur...";
         }
-            
-
-        document.getElementById('output').innerText = output
+        document.getElementById('output').innerText = output;
     })
-    
+
+    Venasaur.addEventListener('click',function(){
+        if(bulbTree == true && evoFlag == true){
+            output = storedName + " has evolved into Venasaur!";  
+            ImagePFP.src = 'ven.png';   
+        } 
+        if(bulbTree == true && evoFlag == false){
+            output = storedName + " can't evolve to Venasaur just yet."; 
+        }
+        if(bulbTree == false){
+            output = storedName + " can't evolve into Venasaur...";
+        }
+        document.getElementById('output').innerText = output;
+    })
+
+    Charmeleon.addEventListener('click',function(){
+        if(charTree == true){
+            output = storedName + " has evolved into Charmeleon!";  
+            ImagePFP.src = 'charmeleon.png';
+            evoFlag = true;
+        } else {
+            output = storedName + " can't evolve into Charmeleon...";
+        }
+        document.getElementById('output').innerText = output;
+    })
+
+    Charizard.addEventListener('click',function(){
+        if(charTree == true && evoFlag == true){
+            output = storedName + " has evolved into Charizard!";  
+            ImagePFP.src = 'ven.png';   
+        } 
+        if(charTree == true && evoFlag == false){
+            output = storedName + " can't evolve to Charizard just yet."; 
+        }
+        if(charTree == false){
+            output = storedName + " can't evolve into Charizard...";
+        }
+        document.getElementById('output').innerText = output;
+    })
+
+    Wartortle.addEventListener('click',function(){
+        if(squirtTree == true){
+            output = storedName + " has evolved into Wartortle!";  
+            ImagePFP.src = 'tortle.png';
+            evoFlag = true;
+        } else {
+            output = storedName + " can't evolve into Wartortle...";
+        }
+        document.getElementById('output').innerText = output;
+    })
+
+    Blastoise.addEventListener('click',function(){
+        if(squirtTree == true && evoFlag == true){
+            output = storedName + " has evolved into Blastoise!";  
+            ImagePFP.src = 'ven.png';   
+        } 
+        if(squirtTree == true && evoFlag == false){
+            output = storedName + " can't evolve to Blastoise just yet."; 
+        }
+        if(squirtTree == false){
+            output = storedName + " can't evolve into Blastoise...";
+        }
+        document.getElementById('output').innerText = output;
+    })
 }
 
 
@@ -144,4 +216,4 @@ function studyVideo(){
     }, 3000);
 }
 
-export{ home, shop, planner, timer }
+//export{ home, shop, planner, timer }
