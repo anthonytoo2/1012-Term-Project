@@ -1,5 +1,3 @@
-// timer.js
-
 // --- DOM Elements ---
 const studyInput = document.getElementById("study-time");
 const breakInput = document.getElementById("break-time");
