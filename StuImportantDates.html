@@ -1,133 +1,154 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <link rel = "stylesheet" href = "style.css">
-        <script src = "TermProject.js"> </script>
-        <title>
-            To-do List
-        </title>
-        <style type="text/css">
-      
-/* Center the container */
-.container {
-    width: 90%;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="TermProject.js"></script>
+    <title>To-do List & Study Goals</title>
+    <style type="text/css">
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px; /* Bigger base font */
+        /* Titles */
+        .container h1, .container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 { font-size: 32px; margin-bottom: 25px; }
+        h2 { font-size: 28px; margin-top: 40px; margin-bottom: 15px; }
+
+        /* Add Task & Goal section */
+        .add-row, .goal-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Text boxes */
+        input[type="text"] {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+        }
+
+    /* Buttons */
+
+
+        button:hover { background: #357ab8; }
+
+        /* Task list */
+        #task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #task-list li {
+            background: #f5f7fa;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-buttons button {
+            margin-left: 5px;
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+
+        /* Goal saved message */
+        #goal-message {
+            color: green;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* Back button */
+        a button {
+            width: 100%;
+            margin-top: 20px;
+        }
+        /* Placeholder font size for all text inputs */
+input::placeholder {
+    font-size: 16px;  /* Change this to whatever size you like */
+    color: #888;      /* Optional: change placeholder color */
 }
 
-/* Title */
-.container h1 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
-}
-
-/* Add Task section */
-.add-row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-/* Text box (large + better UI) */
-#task-input {
-    flex: 1;
-    padding: 12px 15px;
+/* Example for your specific inputs */
+#task-input::placeholder {
     font-size: 18px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
 }
 
-/* Add Task Button */
-button {
-    padding: 12px 18px;
-    font-size: 18px;
-    border: none;
-    background: #4a90e2;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
+#daily-goal::placeholder,
+#monthly-goal::placeholder,
+#yearly-goal::placeholder {
+    font-size: 16px;
 }
 
-button:hover {
-    background: #357ab8;
-}
+    </style>
+</head>
 
-/* Task count text */
-#task-count {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-/* Task list styles */
-#task-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-#task-list li {
-    background: #f5f7fa;
-    padding: 14px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-/* Back button */
-a button {
-    width: 100%;
-    margin-top: 20px;
-}
-
-        </style>
-
-    </head>
-
-    <body onload="showMe()">
-
-        <div class = "pageTop">
-            <div class = "PFP">
-                <img id="buddyPFP" src="" alt="Your chosen buddy image">
-            </div>
-            <div class = userName>    
-                <div id="name"></div>
-            </div>
-             <div class = "shopPage">
-                <button class="button" onclick="shop()"> Shop </button> 
-             </div>
+<body onload="showMe()">
+    <div class="pageTop">
+        <div class="PFP">
+            <img id="buddyPFP" src="" alt="Your chosen buddy image">
         </div>
-        <hr>
-        <div class = "homeButtonFormat">
-            <button class="button" onclick="home()"> Home </button>
+        <div class="userName">
+            <div id="name"></div>
         </div>
-        <body>
-
-<div class="container">
-    <h1>Task Checklist</h2>
-
-    <div class="add-row">
-        <input id="task-input" type="text" placeholder="Enter a task" />
-        <button onclick="addTask()">Add Task</button>
+        <div class="shopPage">
+            <button class="button" onclick="shop()">Shop</button>
+        </div>
+    </div>
+    <hr>
+    <div class="homeButtonFormat">
+        <button class="button" onclick="home()">Home</button>
     </div>
 
-    <p id="task-count">No tasks yet.</p>
+    <div class="container">
+        <h1>Task Checklist</h1>
 
-    <ul id="task-list" aria-live="polite"></ul>
+        <div class="add-row">
+            <input id="task-input" type="text" placeholder="Enter a new task (e.g., Math homework)" />
+            <button onclick="addTask()">Add Task</button>
+        </div>
 
-    <br />
-    <a href="Homepage.html"><button>Back to Dashboard</button></a>
-</div>
+        <p id="task-count">No tasks yet.</p>
 
-<script src="tasks.js"></script>
-    </body>
+        <ul id="task-list" aria-live="polite"></ul>
+
+        <h2>Study Goals</h2>
+        <div class="goal-row">
+            <input id="daily-goal" type="text" placeholder="Daily goal (e.g.,To finish Chapter1)" / ar>
+            <input id="monthly-goal" type="text" placeholder="Monthly goal (e.g., Complete 1 subject)" />
+            <input id="yearly-goal" type="text" placeholder="Yearly goal (e.g., Improve grades to A)" />
+        </div>
+        <button onclick="saveGoals()">Save Goals</button>
+        <p id="goal-message"></p>
+
+        <a href="Index.html"><button>Back to Dashboard</button></a>
+    </div>
+
+    <script src="checktask.js"></script>
+       
+
+</body>
 </html>
