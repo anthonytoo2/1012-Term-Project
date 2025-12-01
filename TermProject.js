@@ -161,7 +161,7 @@ function evoShop(){
     Charizard.addEventListener('click',function(){
         if(charTree == true && evoFlag == true){
             output = storedName + " has evolved into Charizard!";  
-            ImagePFP.src = 'ven.png';   
+            ImagePFP.src = 'zard.png';   
         } 
         if(charTree == true && evoFlag == false){
             output = storedName + " can't evolve to Charizard just yet."; 
