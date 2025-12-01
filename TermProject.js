@@ -7,7 +7,6 @@ let storedName = localStorage.getItem('storedBuddyName');
 let storedImagePath = localStorage.getItem('storedBuddyImage');
 let reward = 0;
 
-
 function showMe(){ 
     
     const nameElement = document.getElementById('name'); 
@@ -98,7 +97,11 @@ function setBuddy(){
         }
         document.getElementById('output').innerText = output;
   });
-}
+}   
+
+
+
+
 
 function evoShop(){
     //i created 6 specific buttons that check for conditions hence i have to make 6 variables
