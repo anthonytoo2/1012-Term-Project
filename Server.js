@@ -2,9 +2,9 @@ const express = require('express');
 const port = 8000;
 const app = express();
 
-// Route to receive messages
-app.post('/buddy', (req, res) => {
-  res.send('Hey, so There was gonna be a Variable sent here but it \didn\'t work out'); // optional response
+// Route 
+app.get('/', (req, res) => {
+  res.send('Maybe user registry could be here in the future?');
 });
 
 app.listen(port, () => {

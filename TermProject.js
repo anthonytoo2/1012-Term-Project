@@ -19,6 +19,12 @@ function showMe(){
     }
 }
 
+fetch('/', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ message: 'hello' })
+});
+
 function buddyImage(){
     const image = document.getElementById('chooseBuddy'); 
     const valueInput = document.getElementById('value');
