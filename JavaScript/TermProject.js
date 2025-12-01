@@ -127,8 +127,21 @@ function evoShop(){
     let evoFlag = JSON.parse(localStorage.getItem("evoFlag"));// grabs previous values from buddyImage
 
     let output;
-
+    /**
+     * There's currently 2 issues with this function that will be revised at a later time due
+     * to time constraints: 
+     * - the first issue is that the evolved pokemon will never populate the top
+     * left image whenever you leave the shop page
+     * - the second issue being that it isn't intentional for the buddy to "devolve" 
+     * (i.e going from ivysaur to venasaur, then going back to ivysaur).
+     * 
+     * These changes will be made at a later date but the code has remnants of my attempt to fix the 2nd issue
+     * as that one is a easier fix.
+     */
     ivysaur.addEventListener('click',function(){
+        if (evoFlag == true){
+            output = "There's a time and place for this, but not right now"
+        }
         if(bulbTree == true){
             output = storedName + " has evolved into Ivysaur!";  
             evoFlag = true;
@@ -137,6 +150,7 @@ function evoShop(){
         } else {
             output = storedName + " can't evolve into Ivysaur...";
         }
+        
         document.getElementById('output').innerText = output;
     })
 
@@ -155,6 +169,9 @@ function evoShop(){
     })
 
     Charmeleon.addEventListener('click',function(){
+        if (evoFlag == true){
+            output = "There's a time and place for this, but not right now"
+        }
         if(charTree == true){
             output = storedName + " has evolved into Charmeleon!";  
             ImagePFP.src = 'MediaContent/charmeleon.png';
@@ -180,6 +197,9 @@ function evoShop(){
     })
 
     Wartortle.addEventListener('click',function(){
+        if (evoFlag == true){
+            output = "There's a time and place for this, but not right now"
+        }
         if(squirtTree == true){
             output = storedName + " has evolved into Wartortle!";  
             ImagePFP.src = 'MediaContent/tortle.png';
