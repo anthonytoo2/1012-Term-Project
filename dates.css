@@ -1,0 +1,102 @@
+/* Container */
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(199, 210, 221);
+}
+
+/* Titles */
+.container h1, .container h2 {
+text-align: center;
+color: #333;
+}
+
+h1 { font-size: 32px;
+     margin-bottom: 25px; 
+}
+
+h2 { font-size: 28px;
+     margin-top: 40px;
+     margin-bottom: 15px;
+}
+
+/* Add Task & Goal section */
+.add-row, .goal-row {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+}
+
+/* Text boxes */
+input[type="text"] {
+flex: 1;
+min-width: 120px;
+padding: 12px 15px;
+font-size: 18px;
+border-radius: 8px;
+border: 1px solid #aaa;
+}
+
+/* Buttons */
+
+
+button:hover { background: #357ab8; }
+
+/* Task list */
+#task-list {
+list-style-type: none;
+padding: 0;
+}
+
+#task-list li {
+background: #f5f7fa;
+padding: 14px;
+border-radius: 8px;
+margin-bottom: 10px;
+font-size: 18px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.task-buttons button {
+margin-left: 5px;
+padding: 6px 10px;
+font-size: 14px;
+}
+
+/* Goal saved message */
+#goal-message {
+color: green;
+font-size: 16px;
+margin-top: 10px;
+}
+
+/* Back button */
+a button {
+width: 100%;
+margin-top: 20px;
+}
+/* Placeholder font size for all text inputs */
+input::placeholder {
+font-size: 16px;  /* Change this to whatever size you like */
+color: #888;      /* Optional: change placeholder color */
+}
+
+/* Example for your specific inputs */
+#task-input::placeholder {
+font-size: 18px;
+}
+
+#daily-goal::placeholder,
+#monthly-goal::placeholder,
+#yearly-goal::placeholder {
+font-size: 16px;
+}

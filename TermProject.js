@@ -1,11 +1,10 @@
-/* comment out lines 3-11 to run vitest*/
+/* comment out lines 3-7 to run vitest*/
 
 let buddyName;
 let buddyPicture;
 let bulbTree,charTree,squirtTree,evoFlag;
 let storedName = localStorage.getItem('storedBuddyName');
 let storedImagePath = localStorage.getItem('storedBuddyImage');
-let reward = 0;
 
 
 function showMe(){ 
@@ -77,9 +76,11 @@ function setBuddy(){
         let value = document.getElementById('value').value;
         let input = document.getElementById('input').value;
 
+        /*saves the user name to a local variable that can be access throughout the program*/
         window.buddyName = document.getElementById('input').value;
         localStorage.setItem('storedBuddyName', window.buddyName);
 
+        /*saves the choen buddy to a local variable that can be access throughout the program*/
         if (window.buddyImage) {
             localStorage.setItem('storedBuddyImage', window.buddyImage);
         } else {
@@ -195,6 +196,7 @@ function evoShop(){
 }
 
 
+/* button functions to redirect users, but doesnt allow them to go back to the previous page*/
 function home(){
     location.replace("IndexStu.html");
 }
@@ -215,7 +217,6 @@ function studyVideo(){
     setTimeout(() => {
         location.replace("StuReward.html"); /* timer exits just to stop the user from skipping too fast, can be adjusted to a larger time interval if anything*/
     }, 3000);
-    reward += 60;
 }
 
 //export{ home, shop, planner, timer }
