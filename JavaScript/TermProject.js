@@ -25,11 +25,12 @@ fetch('/', {
   body: JSON.stringify({ message: 'hello' })
 });
 
+
 function buddyImage(){
     const image = document.getElementById('chooseBuddy'); 
     const valueInput = document.getElementById('value');
 
-    let finalImagePath = 'bulb.png';
+    let finalImagePath = 'MediaContent/bulb.png';
     bulbTree = true;
     squirtTree = false;
     charTree = false;
@@ -45,20 +46,20 @@ function buddyImage(){
 
     valueInput.addEventListener('change', function() {
         const value = valueInput.value;
-        if (value === 'buddy1'){
-            finalImagePath = 'Bulb.png';
+        if (value === 'Bulbasaur'){
+            finalImagePath = 'MediaContent/Bulb.png';
             bulbTree = true;
             squirtTree = false;
             charTree = false;
         }
-        if (value === 'buddy2'){
-            finalImagePath = 'Squirt.png';
+        if (value === 'Squirtle'){
+            finalImagePath = 'MediaContent/Squirt.png';
             bulbTree = false;
             squirtTree = true;
             charTree = false;
         } 
-        if (value === 'buddy3'){
-            finalImagePath = 'Char.png';
+        if (value === 'Charmander'){
+            finalImagePath = 'MediaContent/Char.png';
             bulbTree = false;
             squirtTree = false;
             charTree = true;
@@ -131,7 +132,7 @@ function evoShop(){
         if(bulbTree == true){
             output = storedName + " has evolved into Ivysaur!";  
             evoFlag = true;
-            ImagePFP.src = 'ivy.png';
+            ImagePFP.src = 'MediaContent/ivy.png';
             localStorage.setItem('buddyPFP',ImagePFP);
         } else {
             output = storedName + " can't evolve into Ivysaur...";
@@ -142,7 +143,7 @@ function evoShop(){
     Venasaur.addEventListener('click',function(){
         if(bulbTree == true && evoFlag == true){
             output = storedName + " has evolved into Venasaur!";  
-            ImagePFP.src = 'ven.png';   
+            ImagePFP.src = 'MediaContent/ven.png';   
         } 
         if(bulbTree == true && evoFlag == false){
             output = storedName + " can't evolve to Venasaur just yet."; 
@@ -156,7 +157,7 @@ function evoShop(){
     Charmeleon.addEventListener('click',function(){
         if(charTree == true){
             output = storedName + " has evolved into Charmeleon!";  
-            ImagePFP.src = 'charmeleon.png';
+            ImagePFP.src = 'MediaContent/charmeleon.png';
             evoFlag = true;
         } else {
             output = storedName + " can't evolve into Charmeleon...";
@@ -167,7 +168,7 @@ function evoShop(){
     Charizard.addEventListener('click',function(){
         if(charTree == true && evoFlag == true){
             output = storedName + " has evolved into Charizard!";  
-            ImagePFP.src = 'zard.png';   
+            ImagePFP.src = 'MediaContent/zard.png';   
         } 
         if(charTree == true && evoFlag == false){
             output = storedName + " can't evolve to Charizard just yet."; 
@@ -181,7 +182,7 @@ function evoShop(){
     Wartortle.addEventListener('click',function(){
         if(squirtTree == true){
             output = storedName + " has evolved into Wartortle!";  
-            ImagePFP.src = 'tortle.png';
+            ImagePFP.src = 'MediaContent/tortle.png';
             evoFlag = true;
         } else {
             output = storedName + " can't evolve into Wartortle...";
@@ -192,7 +193,7 @@ function evoShop(){
     Blastoise.addEventListener('click',function(){
         if(squirtTree == true && evoFlag == true){
             output = storedName + " has evolved into Blastoise!";  
-            ImagePFP.src = 'ven.png';   
+            ImagePFP.src = 'MediaContent/ven.png';   
         } 
         if(squirtTree == true && evoFlag == false){
             output = storedName + " can't evolve to Blastoise just yet."; 

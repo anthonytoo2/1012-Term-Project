@@ -56,6 +56,13 @@ hr{
   width:20%;
   float:right;
 }
+h1{
+  text-align: center;
+}
+
+.stu{
+  text-align: left;
+}
 
 .points{
   height:100%;
