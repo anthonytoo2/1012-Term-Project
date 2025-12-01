@@ -45,19 +45,19 @@ function buddyImage(){
 
     valueInput.addEventListener('change', function() {
         const value = valueInput.value;
-        if (value === 'buddy1'){
+        if (value === 'Bulbasaur'){
             finalImagePath = 'Bulb.png';
             bulbTree = true;
             squirtTree = false;
             charTree = false;
         }
-        if (value === 'buddy2'){
+        if (value === 'Squirtle'){
             finalImagePath = 'Squirt.png';
             bulbTree = false;
             squirtTree = true;
             charTree = false;
         } 
-        if (value === 'buddy3'){
+        if (value === 'Charmander'){
             finalImagePath = 'Char.png';
             bulbTree = false;
             squirtTree = false;
